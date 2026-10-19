@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0E0E10;
+  --surface: #16161A;
+  --tactical-orange: #FF5500;
+  --glow-orange: #FF8800;
+  --text-primary: #EDEDEF;
+  --text-secondary: #8E8E98;
+  --grid-dot: #26262B;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #0E0E10;
+  color: #EDEDEF;
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Custom Tactical Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0E0E10;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #26262B;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 85, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF5500;
+  box-shadow: 0 0 10px rgba(255, 85, 0, 0.6);
+}
+
+::selection {
+  background: #FF5500;
+  color: #0E0E10;
+}
+
+/* Background Radial Dot Grid */
+.tactical-dot-grid {
+  background-image: radial-gradient(#26262B 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Tactical Crosshair / Blueprint Grid */
+.tactical-blueprint-grid {
+  background-image: 
+    linear-gradient(to right, rgba(38, 38, 43, 0.4) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(38, 38, 43, 0.4) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* CRT Scanlines */
+.crt-scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.35) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+}
+
+/* Glowing text effects */
+.text-glow-orange {
+  text-shadow: 0 0 12px rgba(255, 85, 0, 0.65), 0 0 25px rgba(255, 136, 0, 0.4);
+}
+
+.text-glow-amber {
+  text-shadow: 0 0 10px rgba(255, 170, 51, 0.6);
+}
+
+.text-glow-ember {
+  text-shadow: 0 0 12px rgba(255, 34, 0, 0.7);
+}
+
+/* Border glows */
+.border-glow-orange {
+  box-shadow: 0 0 15px rgba(255, 85, 0, 0.35);
+  border-color: #FF5500;
+}
+
+/* Keycap 3D Tactile Styling */
+.keycap-bevel {
+  box-shadow: 0 4px 0 #08080a, 0 6px 12px rgba(0, 0, 0, 0.6);
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.keycap-bevel:active,
+.keycap-pressed {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #08080a, 0 2px 5px rgba(255, 85, 0, 0.4);
+}
+
+/* Noise overlay */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  opacity: 0.035;
+  z-index: 9999;
+}
