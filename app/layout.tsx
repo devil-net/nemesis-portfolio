@@ -25,9 +25,21 @@ const courierPrime = Courier_Prime({
 });
 
 export const metadata: Metadata = {
-  title: "DHANUSH GURUDU // NEMESIS — Cybersecurity & Software Engineering",
+  title: "nemesis",
   description:
     "Tactical portfolio of Dhanush Gurudu (Codename: Nemesis) — Cybersecurity Undergraduate at NFSU, Digital Forensics, Security Engineering & Reverse Engineering.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
+  appleWebApp: {
+    title: "nemesis",
+  },
   keywords: [
     "Dhanush Gurudu",
     "Nemesis",
